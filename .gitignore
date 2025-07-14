@@ -1,0 +1,545 @@
+# ===================================
+# COMPREHENSIVE GITIGNORE FOR FULL-STACK APP
+# Backend (Node.js/Express) + Frontend (React/Vite)
+# ===================================
+
+# ===================================
+# DEPENDENCIES & PACKAGES
+# ===================================
+node_modules/
+.pnp
+.pnp.js
+jspm_packages/
+bower_components/
+
+# Package manager files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+.npm/
+.yarn/
+.yarn-integrity
+.pnpm-store/
+
+# Lock files (uncomment the one you don't use)
+# package-lock.json  # if using yarn
+# yarn.lock          # if using npm
+
+# ===================================
+# ENVIRONMENT VARIABLES & SECRETS
+# ===================================
+.env
+.env.local
+.env.development
+.env.development.local
+.env.test
+.env.test.local
+.env.production
+.env.production.local
+.env.*.local
+
+# API keys and secrets
+secrets/
+auth_keys/
+*.pem
+*.key
+*.p12
+*.p8
+*.cer
+*.crt
+*.der
+*.cert
+
+# ===================================
+# BUILD OUTPUTS & DIST
+# ===================================
+# Frontend builds
+build/
+dist/
+out/
+.next/
+.nuxt/
+.output/
+.svelte-kit/
+storybook-static/
+
+# Backend builds
+lib/
+compiled/
+
+# ===================================
+# LOGS & DEBUGGING
+# ===================================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+firebase-debug.log
+firestore-debug.log
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# ===================================
+# TESTING & COVERAGE
+# ===================================
+coverage/
+.coverage/
+*.lcov
+.nyc_output/
+.jest/
+test-results/
+playwright-report/
+
+# Cypress
+cypress/videos/
+cypress/screenshots/
+cypress/downloads/
+
+# ===================================
+# CACHE & TEMPORARY FILES
+# ===================================
+# Vite
+.vite/
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
+
+# Parcel
+.cache/
+.parcel-cache/
+
+# Webpack
+.webpack/
+
+# SWC
+.swc/
+
+# ESBuild
+.esbuild/
+
+# Other caches
+.eslintcache
+.stylelintcache
+.prettiercache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+*.bak
+*.backup
+*.old
+*.orig
+*.rej
+*.swp
+*.swo
+*~
+
+# ===================================
+# DATABASE FILES
+# ===================================
+*.db
+*.sqlite
+*.sqlite3
+dump/
+
+# ===================================
+# EDITOR & IDE FILES
+# ===================================
+# VSCode
+.vscode/
+*.code-workspace
+
+# JetBrains IDEs
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# ===================================
+# OPERATING SYSTEM FILES
+# ===================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network\ Trash\ Folder
+Temporary\ Items
+.apdisk
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ===================================
+# DEPLOYMENT & CLOUD
+# ===================================
+# Vercel
+.vercel/
+
+# Netlify
+.netlify/
+
+# Firebase
+.firebase/
+
+# Serverless
+.serverless/
+
+# ===================================
+# DOCKER & CONTAINERIZATION
+# ===================================
+# Docker build context
+.dockerignore
+
+# Docker volumes and data
+docker-data/
+docker-volumes/
+docker/data/
+volumes/
+
+# Docker Compose overrides and local configs
+docker-compose.override.yml
+docker-compose.local.yml
+docker-compose.dev.yml
+docker-compose.prod.yml
+docker-compose.*.local.yml
+
+# Docker logs
+docker-logs/
+*.docker.log
+
+# Docker build artifacts
+.docker/
+docker-build/
+docker-tmp/
+
+# Container runtime files
+*.container.log
+.container-*
+
+# Docker secrets and configs
+docker-secrets/
+docker-configs/
+.docker-secrets/
+
+# Docker registry credentials
+.docker/config.json
+.dockercfg
+
+# Docker Machine files
+.docker-machine/
+
+# Docker Buildx cache
+.buildx-cache/
+
+# Kubernetes manifests with secrets (optional)
+# k8s-secrets.yml
+# *-secret.yaml
+
+# Helm charts dependencies
+charts/*/charts/
+charts/*/*.tgz
+
+# ===================================
+# CONTAINER ORCHESTRATION
+# ===================================
+# Kubernetes
+*.kubeconfig
+.kube/config
+k8s-local/
+kubernetes-local/
+
+# Docker Swarm
+.swarm/
+
+# Podman
+.local/share/containers/
+
+# ===================================
+# MICROSERVICES & API GATEWAY
+# ===================================
+# Nginx configs with sensitive data
+nginx-secrets/
+ssl-certs/
+certificates/
+
+# Load balancer configs
+haproxy-secrets/
+traefik-secrets/
+
+# ===================================
+# FRONTEND SPECIFIC
+# ===================================
+# React DevTools
+.react-devtools-cache/
+
+# TypeScript
+*.tsbuildinfo
+
+# Sass/SCSS
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
+
+# Bundle analyzer
+bundle-analyzer-report.html
+.bundlewatch.json
+
+# Lighthouse CI
+.lighthouseci/
+
+# Static assets (uploads)
+/frontend/public/uploads/
+/frontend/public/temp/
+/frontend/src/assets/temp/
+
+# Generated files
+/frontend/src/generated/
+*.generated.*
+
+# ===================================
+# BACKEND SPECIFIC
+# ===================================
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Grunt intermediate storage
+.grunt
+
+# node-waf configuration
+.lock-wscript
+
+# Compiled binary addons
+build/Release
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Optional npm cache directory
+.npm
+
+# Microbundle cache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# FuseBox cache
+.fusebox/
+
+# DynamoDB Local files
+.dynamodb/
+
+# TernJS port file
+.tern-port
+
+# Stores VSCode versions used for testing VSCode extensions
+.vscode-test
+
+# yarn v2
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+# Backend uploads
+/backend/uploads/
+/backend/tmp/
+
+# ===================================
+# PROJECT SPECIFIC
+# ===================================
+# Documentation builds
+/docs/build/
+/docs/temp/
+
+# Development notes
+NOTES.md
+TODO.md
+DEVELOPMENT.md
+SCRATCH.md
+
+# Archives
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# Backup files
+*.backup
+backup/
+
+# Scripts (if containing sensitive info)
+scripts/deploy/
+scripts/secrets/
+
+# ===================================
+# PRODUCTION & MONITORING
+# ===================================
+# Production logs
+production-logs/
+app-logs/
+error-logs/
+
+# Monitoring data
+grafana-data/
+prometheus-data/
+metrics/
+
+# Performance reports
+lighthouse-reports/
+performance-reports/
+
+# Security scans
+security-reports/
+vulnerability-reports/
+
+# ===================================
+# CI/CD & AUTOMATION
+# ===================================
+# GitHub Actions artifacts
+.github/workflows/artifacts/
+
+# Jenkins
+.jenkins/
+
+# GitLab CI
+.gitlab-ci-cache/
+
+# CircleCI
+.circleci/cache/
+
+# Build artifacts from CI
+ci-artifacts/
+build-artifacts/
+
+# Test reports
+test-reports/
+coverage-reports/
+
+# ===================================
+# DATABASES & STORAGE
+# ===================================
+# Database backups
+*.sql.backup
+*.dump
+db-backups/
+database-dumps/
+
+# Redis dumps
+dump.rdb
+appendonly.aof
+
+# PostgreSQL
+*.pgdump
+
+# MySQL dumps
+*.mysql
+
+# MongoDB exports
+*.bson
+mongo-dumps/
+
+# Elastic Search data
+elasticsearch-data/
+
+# ===================================
+# MAIL & COMMUNICATION
+# ===================================
+# Mail server data
+mail-data/
+postfix-data/
+
+# Message queue data
+rabbitmq-data/
+redis-data/
+kafka-data/
+
+# ===================================
+# OPTIONAL EXCLUSIONS
+# ===================================
+# Uncomment any of these if needed for your project
+
+# ESLint
+# .eslintrc.js
+# .eslintrc.json
+
+# Prettier
+# .prettierrc
+# .prettierignore
+
+# Husky
+# .husky/
+
+# Commitizen
+# .cz-config.js
+
+# Release files
+# CHANGELOG.md
