@@ -2,6 +2,12 @@
 
 A full-stack task management application built with React, Node.js, Express, and MongoDB. This application provides secure user authentication with two-factor authentication (2FA), task management with calendar integration, and a modern responsive UI with dark/light theme support.
 
+## 🌐 Live Demo
+
+**Frontend (Deployed on Vercel):** [https://task-project-two-rust.vercel.app/](https://task-project-two-rust.vercel.app/)
+
+> **Note:** The backend API needs to be deployed separately for full functionality. The frontend demo showcases the UI/UX design and interface.
+
 ## Key Features
 
 - **Secure Authentication**: JWT-based authentication with optional two-factor authentication (2FA) using TOTP
@@ -291,6 +297,47 @@ docker-compose exec backend sh
 
 ## Deployment
 
+### Frontend Deployment (Vercel)
+
+The frontend is deployed and accessible at: **[https://task-project-two-rust.vercel.app/](https://task-project-two-rust.vercel.app/)**
+
+#### Deploy Your Own Frontend to Vercel:
+
+1. **Fork this repository**
+2. **Sign up for [Vercel](https://vercel.com)**
+3. **Import your repository:**
+   - Go to Vercel Dashboard
+   - Click "New Project"
+   - Select your forked repository
+   - Set root directory to `frontend`
+   - Framework will auto-detect as Vite
+4. **Configure environment variables:**
+   - Add `VITE_API_URL` with your backend URL
+5. **Deploy!**
+
+### Backend Deployment Options
+
+#### Option 1: Railway
+1. Sign up for [Railway](https://railway.app)
+2. Connect your GitHub repository
+3. Select the `backend` folder
+4. Add environment variables (MONGO_URI, JWT_SECRET)
+5. Deploy
+
+#### Option 2: Heroku
+1. Install Heroku CLI
+2. Create new Heroku app
+3. Set buildpack to Node.js
+4. Add MongoDB Atlas connection string
+5. Deploy via Git
+
+#### Option 3: DigitalOcean App Platform
+1. Create account on DigitalOcean
+2. Use App Platform
+3. Connect repository
+4. Configure build settings for backend
+5. Add environment variables
+
 ### Environment Setup
 
 1. Set up a production MongoDB instance
@@ -306,3 +353,13 @@ docker-compose exec backend sh
 # Production build
 docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d
 ```
+
+## 🚀 Quick Links
+
+- **Live Demo:** [https://task-project-two-rust.vercel.app/](https://task-project-two-rust.vercel.app/)
+- **Repository:** [https://github.com/oshadha2k01/Task-Project](https://github.com/oshadha2k01/Task-Project)
+- **Issues:** [GitHub Issues](https://github.com/oshadha2k01/Task-Project/issues)
+
+---
+
+**Made with ❤️ by Oshadha | [Live Demo](https://task-project-two-rust.vercel.app/)**
