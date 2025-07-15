@@ -22,31 +22,29 @@ exports.login = async (req, res) => {
     const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch) return res.status(400).json({ error: "Invalid credentials" });
 
-    // Check if 2FA is enabled
     if (user.isTwoFactorEnabled) {
       if (!twoFactorToken) {
-        return res.status(200).json({ 
+        return res.status(200).json({
           requires2FA: true,
-          message: "2FA token required" 
+          message: "2FA token required",
         });
       }
 
-      // Verify 2FA token
+      // Verify 2FA
       let verified = false;
 
-      // Check if it's a backup code
       if (user.backupCodes.includes(twoFactorToken.toUpperCase())) {
-        // Remove used backup code
-        user.backupCodes = user.backupCodes.filter(code => code !== twoFactorToken.toUpperCase());
+        user.backupCodes = user.backupCodes.filter(
+          (code) => code !== twoFactorToken.toUpperCase()
+        );
         await user.save();
         verified = true;
       } else {
-        // Verify TOTP token
         verified = speakeasy.totp.verify({
           secret: user.twoFactorSecret,
-          encoding: 'base32',
+          encoding: "base32",
           token: twoFactorToken,
-          window: 2
+          window: 2,
         });
       }
 
@@ -56,13 +54,13 @@ exports.login = async (req, res) => {
     }
 
     const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET);
-    res.json({ 
-      token, 
-      user: { 
-        id: user._id, 
+    res.json({
+      token,
+      user: {
+        id: user._id,
         name: user.name,
-        isTwoFactorEnabled: user.isTwoFactorEnabled 
-      } 
+        isTwoFactorEnabled: user.isTwoFactorEnabled,
+      },
     });
   } catch (err) {
     res.status(500).json({ error: err.message });

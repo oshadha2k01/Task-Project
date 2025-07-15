@@ -1,5 +1,5 @@
-const { MongoMemoryServer } = require('mongodb-memory-server');
-const mongoose = require('mongoose');
+const { MongoMemoryServer } = require("mongodb-memory-server");
+const mongoose = require("mongoose");
 
 let mongoServer;
 
@@ -22,5 +22,4 @@ beforeEach(async () => {
   }
 });
 
-// Global test timeout
 jest.setTimeout(30000);

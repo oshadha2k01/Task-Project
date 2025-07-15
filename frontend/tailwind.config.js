@@ -7,22 +7,26 @@ export default {
   darkMode: 'class',
   theme: {
     extend: {
+      fontFamily: {
+        'sans': ['Poppins', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif'],
+        'poppins': ['Poppins', 'sans-serif'],
+      },
       colors: {
         primary: {
-          light: '#4F46E5', // Indigo 600
-          dark: '#6366F1',  // Indigo 500
+          light: '#4F46E5',
+          dark: '#6366F1', 
         },
         secondary: {
-          light: '#10B981', // Emerald 500
-          dark: '#34D399',  // Emerald 400
+          light: '#10B981', 
+          dark: '#34D399',  
         },
         surface: {
-          light: '#FFFFFF', // White
-          dark: '#111827',  // Gray 900
+          light: '#FFFFFF', 
+          dark: '#111827',  
         },
         background: {
-          light: '#F9FAFB', // Gray 50
-          dark: '#1F2937',  // Gray 800
+          light: '#F9FAFB', 
+          dark: '#1F2937',  
         }
       }
     },

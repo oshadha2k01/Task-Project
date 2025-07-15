@@ -1,4 +1,4 @@
-# Task Management Application 
+# Task Management Application
 
 A full-stack task management application built with React, Node.js, Express, and MongoDB. This application provides secure user authentication with two-factor authentication (2FA), task management with calendar integration, and a modern responsive UI with dark/light theme support.
 
@@ -16,6 +16,7 @@ A full-stack task management application built with React, Node.js, Express, and
 ## Technology Stack
 
 ### Frontend
+
 - **React 19** - Modern React framework
 - **Vite** - Fast build tool and development server
 - **Tailwind CSS** - Utility-first CSS framework
@@ -27,6 +28,7 @@ A full-stack task management application built with React, Node.js, Express, and
 - **QRCode.react** - QR code generation for 2FA
 
 ### Backend
+
 - **Node.js** - JavaScript runtime
 - **Express.js** - Web application framework
 - **MongoDB** - NoSQL database with Mongoose ODM
@@ -38,6 +40,7 @@ A full-stack task management application built with React, Node.js, Express, and
 - **Jest** - Testing framework
 
 ### DevOps & Tools
+
 - **Docker & Docker Compose** - Containerization
 - **Nginx** - Web server (production)
 - **Redis** - Session management (optional)
@@ -59,6 +62,7 @@ Before you begin, ensure you have the following installed on your machine:
 ### Option 1: Local Development Setup
 
 #### 1. Clone the Repository
+
 ```bash
 git clone https://github.com/oshadha2k01/Task-Project.git
 cd Task-Project
@@ -66,17 +70,12 @@ cd Task-Project
 
 #### 2. Backend Setup
 
-```bash
-# Navigate to backend directory
+````bash
 cd backend
 
 # Install dependencies
 npm install
 
-# Create environment file
-copy .env.example .env
-# Or on Unix-based systems: cp .env.example .env
-```
 
 #### 3. Configure Environment Variables
 
@@ -84,7 +83,6 @@ Create a `.env` file in the `backend` directory with the following variables:
 
 ```env
 # Server Configuration
-NODE_ENV=development
 PORT=5000
 
 # Database Configuration
@@ -92,14 +90,12 @@ MONGO_URI=mongodb://localhost:27017/taskapp
 
 # JWT Configuration
 JWT_SECRET=your-super-secret-jwt-key-change-in-production
-
-# Optional: Redis Configuration (if using Redis for sessions)
-REDIS_URL=redis://localhost:6379
-```
+````
 
 #### 4. Start MongoDB
 
 **Using MongoDB Community Server:**
+
 ```bash
 # Start MongoDB service (Windows)
 net start MongoDB
@@ -112,6 +108,7 @@ sudo systemctl start mongod
 ```
 
 **Or using MongoDB Docker container:**
+
 ```bash
 docker run -d -p 27017:27017 --name mongodb mongo:7.0
 ```
@@ -145,6 +142,7 @@ The frontend application will start on `http://localhost:5173`
 ### Option 2: Docker Setup (Recommended for Production)
 
 #### 1. Clone the Repository
+
 ```bash
 git clone https://github.com/oshadha2k01/Task-Project.git
 cd Task-Project
@@ -179,7 +177,6 @@ docker-compose logs -f
 - **Frontend**: http://localhost (port 80)
 - **Backend API**: http://localhost:5000
 - **MongoDB**: localhost:27017
-- **Redis**: localhost:6379
 
 #### 5. Stop the Application
 
@@ -221,8 +218,6 @@ npm test
 
 - `POST /api/auth/register` - Register a new user
 - `POST /api/auth/login` - Login user
-- `GET /api/auth/profile` - Get user profile (requires JWT)
-- `PUT /api/auth/profile` - Update user profile (requires JWT)
 
 ### Task Management Endpoints
 
@@ -311,30 +306,3 @@ docker-compose exec backend sh
 # Production build
 docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d
 ```
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feature-name`
-3. Commit your changes: `git commit -m "Add feature"`
-4. Push to the branch: `git push origin feature-name`
-5. Submit a pull request
-
-## License
-
-This project is licensed under the ISC License.
-
-## Support
-
-If you encounter any issues or have questions, please:
-
-1. Check the existing [Issues](https://github.com/oshadha2k01/Task-Project/issues)
-2. Create a new issue with detailed information
-3. Contact the development team
-
-## Version History
-
-- **v1.0.0** - Initial release with core task management features
-- Features: Authentication, Task CRUD, 2FA, Dark/Light theme, Calendar view
-
----

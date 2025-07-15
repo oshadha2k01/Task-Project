@@ -1,16 +1,19 @@
 const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
 
-const userSchema = new mongoose.Schema({
-  name: String,
-  email: { type: String, unique: true },
-  password: String,
-  twoFactorSecret: String,
-  isTwoFactorEnabled: { type: Boolean, default: false },
-  backupCodes: [String],
-}, {
-  timestamps: true
-});
+const userSchema = new mongoose.Schema(
+  {
+    name: String,
+    email: { type: String, unique: true },
+    password: String,
+    twoFactorSecret: String,
+    isTwoFactorEnabled: { type: Boolean, default: false },
+    backupCodes: [String],
+  },
+  {
+    timestamps: true,
+  }
+);
 
 userSchema.pre("save", async function (next) {
   if (!this.isModified("password")) return next();
