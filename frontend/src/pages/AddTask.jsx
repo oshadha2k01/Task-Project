@@ -316,7 +316,7 @@ export default function AddTask() {
                         ? "border-red-500 dark:border-red-400 focus:ring-red-500 focus:border-red-500"
                         : "border-gray-200 dark:border-gray-700 focus:ring-blue-500 focus:border-blue-500"
                     }`}
-                    placeholder="Enter task title (only letters, numbers, and spaces allowed)"
+                    placeholder="Enter task title"
                     value={newTask}
                     onChange={handleTitleChange}
                     onKeyDown={handleTitleKeyDown}
@@ -344,7 +344,7 @@ export default function AddTask() {
                         ? "border-red-500 dark:border-red-400 focus:ring-red-500 focus:border-500"
                         : "border-gray-200 dark:border-gray-700 focus:ring-blue-500 focus:border-blue-500"
                     }`}
-                    placeholder="Enter task description (only letters, numbers, and spaces allowed)"
+                    placeholder="Enter task description"
                     value={description}
                     onChange={handleDescriptionChange}
                     onKeyDown={handleDescriptionKeyDown}
